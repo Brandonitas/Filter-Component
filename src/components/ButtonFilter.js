@@ -1,11 +1,11 @@
 import React, { Componen, useState, useEffect } from 'react'
 import ButtonImg from './ButtonImg';
+import './style.scss';
 
-const ButtonFilter = ({claridad}) => {
-  const [size, setSize] = useState(4);
-
+const ButtonFilter = ({infoButton , size}) => {
+  
   useEffect(() => {
-    console.log("DATA", claridad)
+    console.log("DATA", infoButton)
 
   }, []); // Or [] if effect doesn't need props or state
 
@@ -13,14 +13,20 @@ const ButtonFilter = ({claridad}) => {
       <div>
       {size == 4 ? (
       <div className="grid grid-cols-4">
-        {claridad.map((clar, i)=>{
+        {infoButton.map((clar, i)=>{
           return(
-            <div key={i}><ButtonImg img={clar.img} text={clar.text}></ButtonImg></div> 
+            <div key={i} className="border-solid border border-blue"><ButtonImg img={clar.img} text={clar.text}></ButtonImg></div> 
           )
         })}
       </div>
       ):(
-        <div><ButtonImg></ButtonImg></div>
+      <div className="grid grid-cols-6">
+        {infoButton.map((clar, i)=>{
+          return(
+            <div key={i} className="border-solid border border-blue"><ButtonImg img={clar.img} text={clar.text}></ButtonImg></div> 
+          )
+        })}
+      </div>
     )}
     </div>
   

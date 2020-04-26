@@ -4,9 +4,9 @@ const ButtonImg = props => {
   
     return (
       <div>
-        <div className="m-auto">
+        <div className="m-1">
           <img className="m-auto" src={`/assets/${props.img}`}/>
-          <p className="text-center mt-2">{props.text}</p>
+          <p className="text-center">{props.text}</p>
         </div>
       </div>
     )
