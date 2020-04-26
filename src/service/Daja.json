@@ -1,0 +1,104 @@
+{
+  "claridad": [
+            {
+              "text": "PERFECTA",
+              "img": "claridad/perfecta.png"
+            },
+            {
+              "text": "IMPERFECCIONES NO VISIBLES",
+              "img": "/claridad/imperfecciones-no-visibles.png"
+            },
+            {
+              "text": "IMPERFECCIONES VISIBLES A 10X",
+              "img": "/claridad/imperfecciones-10x.png"
+            },
+            {
+              "text": "IMPERFECCIONES VISIBLES A SIMPLE VISTA",
+              "img": "claridad/imperfecciones-simple-vista.png"
+            }],
+
+  "forma":[
+            {
+              "text": "REDONDO",
+              "img": "forma/redondo.png"
+            },
+            {
+              "text": "PRINCESA",
+              "img": "forma/princesa.png"
+            },
+            {
+              "text": "ESMERALDA",
+              "img": "forma/esmeralda.png"
+            },
+            {
+              "text": "OVALO",
+              "img": "forma/ovalo.png"
+            },
+            {
+              "text": "MARQUESA",
+              "img": "forma/marquesa.png"
+            },
+            {
+              "text": "PERA",
+              "img": "forma/pera.png"
+            },
+            {
+              "text": "ASSCHER",
+              "img": "forma/asscher.png"
+            },
+            {
+              "text": "CORAZÓN",
+              "img": "forma/corazon.png"
+            },
+            {
+              "text": "COJIJN",
+              "img": "forma/cojijn.png"
+            },
+            {
+              "text": "BAGHETTE",
+              "img": "forma/baguette.png"
+            },
+            {
+              "text": "TRILLÓN",
+              "img": "forma/trillon.png"
+            },
+            {
+              "text": "BAGHETTE",
+              "img": "forma/radiante.png"
+            }],
+  "color": [
+            {
+              "text": "TRANSPARENTE",
+              "img": "color/incoloro.png"
+            },
+            {
+              "text": "CASI INCOLORO",
+              "img": "color/casi-incoloro.png"
+            },
+            {
+              "text": "LIGERAMENTE AMARILLO",
+              "img": "color/ligeramente-amarillo.png"
+            },
+            {
+              "text": "AMARILLO CLARO",
+              "img": "color/amarillo-claro.png"
+            }],
+  "corte": [
+            {
+              "text": "EXCELENTE (MÁXIMO BRILLO)",
+              "img": "corte/excelente.png"
+            },
+            {
+              "text": "MUY BUENO",
+              "img": "corte/muy-bueno.png"
+            },
+            {
+              "text": "BUENO (BRILLANTE)",
+              "img": "corte/bueno.png"
+            },
+            {
+              "text": "REGULAR (POCO BRILLANTE)",
+              "img": "corte/regular.png"
+            }]                       
+
+}
