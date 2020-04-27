@@ -1,13 +1,27 @@
 import React, { Component } from 'react'
+import Button from '@material-ui/core/Button';
+import { createMuiTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles';
+import './style.scss';
 
-const Button = () => {
+const ButtonComponent = ({label, background, color}) => {
   
+  let styles = {
+    color: color,
+    backgroundColor: background,
+    border: "solid", 
+    borderColor: '#1724ab',
+    borderWidth: '1px'
+  };
+
+
     return (
-      <div>
-        
+      <div className="m-4">
+        <Button className="button-style" variant="contained" style={styles}>
+          {label}
+        </Button>
       </div>
     )
   
 }
 
-export default Button
+export default ButtonComponent

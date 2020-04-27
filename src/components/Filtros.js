@@ -1,6 +1,7 @@
 import React, { Component, useState } from 'react'
 import ButtonFilter from './ButtonFilter';
 import RangeFilter from './RangeFilter'
+import ButtonComponent from './Button';
 
 //Import data from JSON
 import Data from '../service/Daja.json'
@@ -38,15 +39,21 @@ const Filtros = () => {
 
             <div className="mb-5">
               <span className="text-base">QUILATAJE</span>
-              <RangeFilter tipo={'quilataje'}></RangeFilter>
+              <RangeFilter minValue={0} maxValue={30} tipo={'quilataje'}></RangeFilter>
             </div>
 
             <div className="mb-5">
               <span className="text-base">PRECIO</span>
-              <RangeFilter tipo={'precio'}></RangeFilter>
+              <RangeFilter prefijo={'$'} minValue={200} maxValue={5000000} tipo={'precio'}></RangeFilter>
             </div>
           </div>
         </div>
+
+      <div className="button-container flex justify-center">
+        <ButtonComponent label={'BUSCAR'} background={'#1724ab'}  color={'#ffffff'}></ButtonComponent>
+        <ButtonComponent label={'LIMPIAR FILTROS'} background={'#ffffff'} color={'#1724ab'}></ButtonComponent>
+      </div>
+
       </div>
     )
   

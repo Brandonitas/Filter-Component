@@ -35,9 +35,9 @@ const StyleSlider = withStyles({
   },
 })(Slider);
 
-const RangeFilter = ({tipo}) => {
+const RangeFilter = ({tipo, minValue, maxValue, prefijo}) => {
  
-  const [value, setValue] = React.useState([0, 100]);
+  const [value, setValue] = React.useState([minValue, maxValue]);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -49,14 +49,6 @@ const RangeFilter = ({tipo}) => {
 
   const handleInputChange2 = (event) => {
     setValue([value[0],event.target.value === '' ? '' : Number(event.target.value)]);
-  };
-
-  const handleBlur = () => {
-    if (value < 0) {
-      setValue(0);
-    } else if (value > 100) {
-      setValue(100);
-    }
   };
 
 
@@ -78,7 +70,8 @@ const RangeFilter = ({tipo}) => {
             value={value}
             onChange={handleChange}
             valueLabelDisplay="auto"
-            //aria-labelledby="range-slider"
+            min={minValue}
+            max={maxValue}
           />
         </div>
         
@@ -87,31 +80,30 @@ const RangeFilter = ({tipo}) => {
             <Input
               className="border-solid border border-blue input-size"
               value={value[0]}
-              //margin="dense"
               onChange={handleInputChange1}
-              onBlur={handleBlur}
               inputProps={{
                 step: 10,
-                min: 0,
-                max: 100,
-                type: 'number'
+                min: minValue,
+                max: maxValue,
+                type: 'number',
               }}
+              startAdornment={prefijo}
             />
           </div>
         <div>
           <Input
               className="border-solid border border-blue input-size"
               value={value[1]}
-              //margin="dense"
               onChange={handleInputChange2}
-              onBlur={handleBlur}
               inputProps={{
                 step: 10,
-                min: 0,
-                max: 100,
+                min: minValue,
+                max: maxValue,
                 type: 'number'
               }}
+              startAdornment={prefijo}
             />
+
           </div>
         </div>
       </div>
