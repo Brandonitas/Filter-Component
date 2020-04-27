@@ -9,7 +9,7 @@ import ButtonFilter from './components/ButtonFilter';
 
 function App() {
   return (
-    <div>
+    <div className="m-8">
       <Filtros></Filtros>
     </div>
   );

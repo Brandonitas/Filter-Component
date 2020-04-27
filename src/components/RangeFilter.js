@@ -1,10 +1,41 @@
 import React, { Component } from 'react'
 import Slider from '@material-ui/core/Slider';
-import { makeStyles } from '@material-ui/core/styles';
 import Input from '@material-ui/core/Input';
+import './style.scss';
+import { withStyles } from '@material-ui/core/styles';
 
 
-const RangeFilter = () => {
+const StyleSlider = withStyles({
+  root: {
+    color: '#1724ab',
+    height: 8,
+  },
+  thumb: {
+    height: 20,
+    width: 20,
+    backgroundColor: '#1724ab',
+    border: '2px solid currentColor',
+    marginTop: -8,
+    marginLeft: -12,
+    '&:focus, &:hover, &$active': {
+      boxShadow: 'inherit',
+    },
+  },
+  active: {},
+  valueLabel: {
+    left: 'calc(-50% + 4px)',
+  },
+  track: {
+    height: 8,
+    borderRadius: 4,
+  },
+  rail: {
+    height: 8,
+    borderRadius: 4,
+  },
+})(Slider);
+
+const RangeFilter = ({tipo}) => {
  
   const [value, setValue] = React.useState([0, 100]);
 
@@ -31,39 +62,58 @@ const RangeFilter = () => {
 
 
     return (
-      <div>
-
-        <Input
-            value={value[0]}
-            //margin="dense"
-            onChange={handleInputChange1}
-            onBlur={handleBlur}
-            inputProps={{
-              step: 10,
-              min: 0,
-              max: 100,
-              type: 'number'
-            }}
+      <div className="block">
+        {tipo == 'quilataje' ? (
+          <div className="flex justify-between">
+            <div>
+              <img className="m-auto mt-4" src="/assets/quilataje/pequeno.png"/>
+            </div>
+            <div>
+              <img className="m-auto" src="/assets/quilataje/grande.png"/>
+            </div>
+          </div>
+        ) : ''}
+        <div>
+          <StyleSlider
+            value={value}
+            onChange={handleChange}
+            valueLabelDisplay="auto"
+            //aria-labelledby="range-slider"
           />
-
-        <Slider
-          value={value}
-          onChange={handleChange}
-          valueLabelDisplay="auto"
-          //aria-labelledby="range-slider"
-        />
-        <Input
-            value={value[1]}
-            //margin="dense"
-            onChange={handleInputChange2}
-            onBlur={handleBlur}
-            inputProps={{
-              step: 10,
-              min: 0,
-              max: 100,
-              type: 'number'
-            }}
-          />
+        </div>
+        
+        <div className="flex justify-between">
+          <div>
+            <Input
+              className="border-solid border border-blue input-size"
+              value={value[0]}
+              //margin="dense"
+              onChange={handleInputChange1}
+              onBlur={handleBlur}
+              inputProps={{
+                step: 10,
+                min: 0,
+                max: 100,
+                type: 'number'
+              }}
+            />
+          </div>
+        <div>
+          <Input
+              className="border-solid border border-blue input-size"
+              value={value[1]}
+              //margin="dense"
+              onChange={handleInputChange2}
+              onBlur={handleBlur}
+              inputProps={{
+                step: 10,
+                min: 0,
+                max: 100,
+                type: 'number'
+              }}
+            />
+          </div>
+        </div>
       </div>
     )
  
