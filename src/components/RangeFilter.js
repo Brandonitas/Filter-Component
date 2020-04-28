@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Slider from '@material-ui/core/Slider';
 import Input from '@material-ui/core/Input';
 import './style.scss';
@@ -58,7 +58,7 @@ const RangeFilter = ({filterData, tipo, minValue, maxValue, prefijo}) => {
 
     return (
       <div className="block">
-        {tipo == 'quilataje' ? (
+        {tipo === 'quilataje' ? (
           <div className="flex justify-between">
             <div>
               <img className="m-auto mt-4" src="/assets/quilataje/pequeno.png"/>

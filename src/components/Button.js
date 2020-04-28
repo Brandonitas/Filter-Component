@@ -1,6 +1,5 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Button from '@material-ui/core/Button';
-import { createMuiTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles';
 import './style.scss';
 
 const ButtonComponent = ({cleanData, arrayData, label, background, color}) => {
@@ -14,7 +13,7 @@ const ButtonComponent = ({cleanData, arrayData, label, background, color}) => {
   };
 
   const searchData =()=>{
-    if(label == 'BUSCAR'){
+    if(label === 'BUSCAR'){
       console.log("LOS DATOS DEL FILTRO SON:",arrayData)
     }else{
       cleanData();

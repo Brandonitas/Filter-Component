@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react'
+import React, {useState } from 'react'
 import ButtonFilter from './ButtonFilter';
 import RangeFilter from './RangeFilter'
 import ButtonComponent from './Button';
@@ -23,12 +23,12 @@ const Filtros = () => {
 
   const filterData = (info, data) =>{
     let cArray = Object.assign([], arrayData);
-    if(info == 'quilataje' || info == 'precio'){
+    if(info === 'quilataje' || info === 'precio'){
       cArray[info] = []
     }
     cArray[info].push(data);
     setArrayData(cArray);
-    console.log(arrayData)
+    //console.log(arrayData)
   }
 
   const cleanData = () =>{
@@ -51,23 +51,23 @@ const Filtros = () => {
           <div>
             <div className="mb-5">
               <span className="text-base">FORMA</span>
-              <ButtonFilter filterData={filterData} info={'forma'} infoButton={forma} size={6}></ButtonFilter>
+              <ButtonFilter filterData={filterData} arrayData={arrayData} info={'forma'} infoButton={forma} size={6}></ButtonFilter>
             </div>
             
             <div className="mb-5">
               <span className="text-base">COLOR</span>
-              <ButtonFilter filterData={filterData} info={'color'} infoButton={color} size={4}></ButtonFilter>
+              <ButtonFilter filterData={filterData} arrayData={arrayData} info={'color'} infoButton={color} size={4}></ButtonFilter>
             </div>
             
             <div className="mb-5">
               <span className="text-base">CLARIDAD</span>
-              <ButtonFilter filterData={filterData} info={'claridad'} infoButton={claridad} size={4}></ButtonFilter>
+              <ButtonFilter filterData={filterData} arrayData={arrayData} info={'claridad'} infoButton={claridad} size={4}></ButtonFilter>
             </div>
           </div>
           <div>
             <div className="mb-5">
               <span className="text-base">CORTE</span>
-              <ButtonFilter filterData={filterData} info={'corte'} infoButton={corte} size={4}></ButtonFilter>
+              <ButtonFilter filterData={filterData} arrayData={arrayData} info={'corte'} infoButton={corte} size={4}></ButtonFilter>
             </div>
 
             <div className="mb-5">

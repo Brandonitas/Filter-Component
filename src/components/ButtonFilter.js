@@ -1,8 +1,8 @@
-import React, { Componen, useState, useEffect } from 'react'
+import React, {useEffect } from 'react'
 import ButtonImg from './ButtonImg';
 import './style.scss';
 
-const ButtonFilter = ({filterData, info, infoButton , size}) => {
+const ButtonFilter = ({arrayData, filterData, info, infoButton , size}) => {
 
   /*const [filterData, setFilterData] = useState({
     forma: 'REDONDO',
@@ -15,10 +15,11 @@ const ButtonFilter = ({filterData, info, infoButton , size}) => {
 
 
   
+
   useEffect(() => {
     //console.log("INFO", info);
-    console.log("DATA", infoButton)
-  }, []); // Or [] if effect doesn't need props or state
+    
+  }, [arrayData]); // Or [] if effect doesn't need props or state
 
   const markButton = (infoButton,event) => {
 
@@ -29,12 +30,12 @@ const ButtonFilter = ({filterData, info, infoButton , size}) => {
 
     return (
       <div>
-      {size == 4 ? (
+      {size === 4 ? (
       <div className="grid grid-cols-4">
         {infoButton.map((infoB, i)=>{
           return(
-            <button key={i} className="filter-button" onClick={(e) => markButton(infoB, e)}>
-              <div className="border-solid border border-blue" ><ButtonImg img={infoB.img} text={infoB.text}></ButtonImg></div> 
+            <button  key={i} className="filter-button" onClick={(e) => markButton(infoB, e)}>
+              <div style={{backgroundColor: arrayData[info].includes(infoB['text']) ? '#C7E1FF' : 'white'}} className="border-solid border border-blue" ><ButtonImg img={infoB.img} text={infoB.text}></ButtonImg></div> 
             </button>
           )
         })}
@@ -44,7 +45,7 @@ const ButtonFilter = ({filterData, info, infoButton , size}) => {
         {infoButton.map((infoB, i)=>{
           return(
             <button key={i} className="filter-button" onClick={(e) => markButton(infoB,i, e)}>
-              <div className="border-solid border border-blue"><ButtonImg img={infoB.img} text={infoB.text}></ButtonImg></div> 
+              <div style={{backgroundColor: arrayData[info].includes(infoB['text']) ? '#C7E1FF' : 'white'}} className="border-solid border border-blue"><ButtonImg img={infoB.img} text={infoB.text}></ButtonImg></div> 
             </button>
           )
         })}
