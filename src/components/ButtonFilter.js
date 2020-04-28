@@ -21,13 +21,6 @@ const ButtonFilter = ({filterData, info, infoButton , size}) => {
   }, []); // Or [] if effect doesn't need props or state
 
   const markButton = (infoButton,event) => {
-    //console.log(info);
-    //console.log(infoButton);
-    //let cData = Object.assign([], filterData);
-    //cData.push({info: infoButton.text});
-    //cData[info] = infoButton.text;
-    //console.log("COPY DATA", cData);
-    //setFilterData(cData);
 
     filterData(info, infoButton.text);
 

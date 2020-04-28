@@ -19,10 +19,6 @@ const Filtros = () => {
     corte: [],
     quilataje:[],
     precio:[],
-    minQuilataje: null,
-    maxQuilataje: null,
-    minPrecio: null,
-    maxPrecio: null
   });
 
   const filterData = (info, data) =>{
@@ -31,6 +27,19 @@ const Filtros = () => {
       cArray[info] = []
     }
     cArray[info].push(data);
+    setArrayData(cArray);
+    console.log(arrayData)
+  }
+
+  const cleanData = () =>{
+    let cArray = { 
+      forma: [],
+      color: [],
+      claridad: [],
+      corte: [],
+      quilataje:[],
+      precio:[],
+    }
     setArrayData(cArray);
     console.log(arrayData)
   }
@@ -74,8 +83,8 @@ const Filtros = () => {
         </div>
 
       <div className="button-container flex justify-center">
-        <ButtonComponent label={'BUSCAR'} background={'#1724ab'}  color={'#ffffff'}></ButtonComponent>
-        <ButtonComponent label={'LIMPIAR FILTROS'} background={'#ffffff'} color={'#1724ab'}></ButtonComponent>
+        <ButtonComponent arrayData={arrayData} label={'BUSCAR'} background={'#1724ab'}  color={'#ffffff'}></ButtonComponent>
+        <ButtonComponent cleanData={cleanData} label={'LIMPIAR FILTROS'} background={'#ffffff'} color={'#1724ab'}></ButtonComponent>
       </div>
 
       </div>
