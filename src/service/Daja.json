@@ -2,103 +2,127 @@
   "claridad": [
             {
               "text": "PERFECTA",
-              "img": "claridad/perfecta.png"
+              "img": "claridad/perfecta.png", 
+              "isSelected": false
             },
             {
               "text": "IMPERFECCIONES NO VISIBLES",
-              "img": "/claridad/imperfecciones-no-visibles.png"
+              "img": "/claridad/imperfecciones-no-visibles.png",
+              "isSelected": false
             },
             {
               "text": "IMPERFECCIONES VISIBLES A 10X",
-              "img": "/claridad/imperfecciones-10x.png"
+              "img": "/claridad/imperfecciones-10x.png",
+              "isSelected": false
             },
             {
               "text": "IMPERFECCIONES VISIBLES A SIMPLE VISTA",
-              "img": "claridad/imperfecciones-simple-vista.png"
+              "img": "claridad/imperfecciones-simple-vista.png",
+              "isSelected": false
             }],
 
   "forma":[
             {
               "text": "REDONDO",
-              "img": "forma/redondo.png"
+              "img": "forma/redondo.png",
+              "isSelected": false
             },
             {
               "text": "PRINCESA",
-              "img": "forma/princesa.png"
+              "img": "forma/princesa.png",
+              "isSelected": false
             },
             {
               "text": "ESMERALDA",
-              "img": "forma/esmeralda.png"
+              "img": "forma/esmeralda.png",
+              "isSelected": false
             },
             {
               "text": "OVALO",
-              "img": "forma/ovalo.png"
+              "img": "forma/ovalo.png",
+              "isSelected": false
             },
             {
               "text": "MARQUESA",
-              "img": "forma/marquesa.png"
+              "img": "forma/marquesa.png",
+              "isSelected": false
             },
             {
               "text": "PERA",
-              "img": "forma/pera.png"
+              "img": "forma/pera.png",
+              "isSelected": false
             },
             {
               "text": "ASSCHER",
-              "img": "forma/asscher.png"
+              "img": "forma/asscher.png",
+              "isSelected": false
             },
             {
               "text": "CORAZÓN",
-              "img": "forma/corazon.png"
+              "img": "forma/corazon.png",
+              "isSelected": false
             },
             {
               "text": "COJIJN",
-              "img": "forma/cojijn.png"
+              "img": "forma/cojijn.png",
+              "isSelected": false
             },
             {
               "text": "BAGHETTE",
-              "img": "forma/baguette.png"
+              "img": "forma/baguette.png",
+              "isSelected": false
             },
             {
               "text": "TRILLÓN",
-              "img": "forma/trillon.png"
+              "img": "forma/trillon.png",
+              "isSelected": false
             },
             {
               "text": "BAGHETTE",
-              "img": "forma/radiante.png"
+              "img": "forma/radiante.png",
+              "isSelected": false
             }],
   "color": [
             {
               "text": "TRANSPARENTE",
-              "img": "color/incoloro.png"
+              "img": "color/incoloro.png",
+              "isSelected": false
             },
             {
               "text": "CASI INCOLORO",
-              "img": "color/casi-incoloro.png"
+              "img": "color/casi-incoloro.png",
+              "isSelected": false
             },
             {
               "text": "LIGERAMENTE AMARILLO",
-              "img": "color/ligeramente-amarillo.png"
+              "img": "color/ligeramente-amarillo.png",
+              "isSelected": false
             },
             {
               "text": "AMARILLO CLARO",
-              "img": "color/amarillo-claro.png"
+              "img": "color/amarillo-claro.png",
+              "isSelected": false
             }],
   "corte": [
             {
               "text": "EXCELENTE (MÁXIMO BRILLO)",
-              "img": "corte/excelente.png"
+              "img": "corte/excelente.png",
+              "isSelected": false
             },
             {
               "text": "MUY BUENO",
-              "img": "corte/muy-bueno.png"
+              "img": "corte/muy-bueno.png",
+              "isSelected": false
             },
             {
               "text": "BUENO (BRILLANTE)",
-              "img": "corte/bueno.png"
+              "img": "corte/bueno.png",
+              "isSelected": false
             },
             {
               "text": "REGULAR (POCO BRILLANTE)",
-              "img": "corte/regular.png"
+              "img": "corte/regular.png",
+              "isSelected": false
             }]                       
 
 }

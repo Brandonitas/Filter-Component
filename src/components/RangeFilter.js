@@ -35,19 +35,22 @@ const StyleSlider = withStyles({
   },
 })(Slider);
 
-const RangeFilter = ({tipo, minValue, maxValue, prefijo}) => {
+const RangeFilter = ({filterData, tipo, minValue, maxValue, prefijo}) => {
  
   const [value, setValue] = React.useState([minValue, maxValue]);
 
   const handleChange = (event, newValue) => {
+    filterData(tipo, newValue)
     setValue(newValue);
   };
 
   const handleInputChange1 = (event) => {
+    filterData(tipo, [event.target.value === '' ? '' : Number(event.target.value),value[1]])
     setValue([event.target.value === '' ? '' : Number(event.target.value),value[1]]);
   };
 
   const handleInputChange2 = (event) => {
+    filterData(tipo, [value[0],event.target.value === '' ? '' : Number(event.target.value)])
     setValue([value[0],event.target.value === '' ? '' : Number(event.target.value)]);
   };
 
@@ -65,7 +68,7 @@ const RangeFilter = ({tipo, minValue, maxValue, prefijo}) => {
             </div>
           </div>
         ) : ''}
-        <div>
+        <div> 
           <StyleSlider
             value={value}
             onChange={handleChange}

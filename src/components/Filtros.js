@@ -12,39 +12,63 @@ const Filtros = () => {
   const [color, setColor] = useState(Data.color);
   const [corte, setCorte] = useState(Data.corte);
 
+  const [arrayData, setArrayData] = useState({ 
+    forma: [],
+    color: [],
+    claridad: [],
+    corte: [],
+    quilataje:[],
+    precio:[],
+    minQuilataje: null,
+    maxQuilataje: null,
+    minPrecio: null,
+    maxPrecio: null
+  });
+
+  const filterData = (info, data) =>{
+    let cArray = Object.assign([], arrayData);
+    if(info == 'quilataje' || info == 'precio'){
+      cArray[info] = []
+    }
+    cArray[info].push(data);
+    setArrayData(cArray);
+    console.log(arrayData)
+  }
+  
+
     return (
       <div>
         <div className="grid grid-cols-2 gap-6">
           <div>
             <div className="mb-5">
               <span className="text-base">FORMA</span>
-              <ButtonFilter infoButton={forma} size={6}></ButtonFilter>
+              <ButtonFilter filterData={filterData} info={'forma'} infoButton={forma} size={6}></ButtonFilter>
             </div>
             
             <div className="mb-5">
               <span className="text-base">COLOR</span>
-              <ButtonFilter infoButton={color} size={4}></ButtonFilter>
+              <ButtonFilter filterData={filterData} info={'color'} infoButton={color} size={4}></ButtonFilter>
             </div>
             
             <div className="mb-5">
               <span className="text-base">CLARIDAD</span>
-              <ButtonFilter infoButton={claridad} size={4}></ButtonFilter>
+              <ButtonFilter filterData={filterData} info={'claridad'} infoButton={claridad} size={4}></ButtonFilter>
             </div>
           </div>
           <div>
             <div className="mb-5">
               <span className="text-base">CORTE</span>
-              <ButtonFilter infoButton={corte} size={4}></ButtonFilter>
+              <ButtonFilter filterData={filterData} info={'corte'} infoButton={corte} size={4}></ButtonFilter>
             </div>
 
             <div className="mb-5">
               <span className="text-base">QUILATAJE</span>
-              <RangeFilter minValue={0} maxValue={30} tipo={'quilataje'}></RangeFilter>
+              <RangeFilter filterData={filterData} info={'quilataje'} minValue={0} maxValue={30} tipo={'quilataje'}></RangeFilter>
             </div>
 
             <div className="mb-5">
               <span className="text-base">PRECIO</span>
-              <RangeFilter prefijo={'$'} minValue={200} maxValue={5000000} tipo={'precio'}></RangeFilter>
+              <RangeFilter filterData={filterData} info={'precio'} prefijo={'$'} minValue={200} maxValue={5000000} tipo={'precio'}></RangeFilter>
             </div>
           </div>
         </div>
